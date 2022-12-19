@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    background-image: url("https://picsum.photos/id/223/600/400");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+}
+h1{
+    text-align: center;
+    padding: 20px 0;
+}
+form{
+    background-image: linear-gradient(0deg, aqua,pink 99%);
+    width: fit-content;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+label{
+    display: inline-block;
+    width: 100px;
+}
+.lang-div, .gender-div{
+    display: inline-block;
+}
+.lang-div label, .gender-div label{
+    width: auto;
+}
+.inputs{
+    border-radius: 5px;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.radio-check{
+    margin-bottom: 20px;
+
+}
+.btn-container{
+    text-align: center;
+}
+.btn-container input{
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(299, 100%, 70%);
+    padding: 10px;
+}
+.btn-container input:hover{
+    background-color: hsl(299, 100%, 40%);
+    color: aliceblue;
+    font-weight: 700;
+    cursor: pointer;
+}
+.textarea-div {
+    vertical-align: middle;
+}

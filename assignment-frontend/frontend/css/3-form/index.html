@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>REGISTER PAGE</h1>
+    <form action="">
+        <div>
+            <label for="firstname">First Name</label>
+            <input 
+                class="inputs"
+                type="text" 
+                name="firstname" 
+                id="firstname"
+                placeholder="Your first name"
+                required>
+        </div>
+        <div>
+            <label for="lastname">Last Name</label>
+            <input
+                class="inputs" 
+                type="text" 
+                name="lastname" 
+                id="lastname"
+                placeholder="Your last name"
+                required>
+        </div>
+        <div>
+            <label for="email">E-mail</label>
+            <input
+                class="inputs" 
+                type="email" 
+                name="email" 
+                id="email"
+                placeholder="Your e-mail"
+                required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input
+                class="inputs" 
+                type="password" 
+                name="password" 
+                id="lastname"
+                placeholder="Your password"
+                required>
+        </div>
+        <div>
+            <label for="dob">Birth Day</label>
+            <input
+                class="inputs" 
+                type="date" 
+                name="dob" 
+                id="dob"
+                value="2002-01-01"
+                placeholder="Your birth"
+                required>
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+            <input 
+                class="inputs" 
+                type="tel" 
+                name="phone" 
+                id="phone"
+                placeholder="Your phone number"
+                required>
+        </div>
+        <div class="textarea-div">
+            <label for="address">Address</label>
+            <textarea 
+                class="inputs textarea-div"
+                name="address" 
+                id="address" 
+                cols="20" rows="5">
+            </textarea>
+        </div>
+
+        <div>
+            <label  for=country">Country</label>
+            <select class="inputs"  name="country" id="country">
+                <option value="">Select Country</option>
+                <option value="turkey">Turkey</option>
+                <option value="usa">USA</option>
+            </select>
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <div class="gender-div">
+                <input 
+                    class="radio-check"
+                    type="radio" 
+                    name="gender" 
+                    id="male">
+                <label for="male">Male</label>
+                <input 
+                    class="radio-check"
+                    type="radio" 
+                    name="gender" 
+                    id="female" checked>
+                <label for="female">Female</label>
+            </div>
+            
+        </div>
+        <div >
+            <label for="languages">Languages</label>
+            <div class="lang-div">
+                <input class="radio-check" type="checkbox" name="lang" id="turkce" checked>
+                <label for="turkce">Türkce</label>
+
+                <input class="radio-check" type="checkbox" name="lang" id="english">
+                <label for="english">English</label>
+
+                <input class="radio-check" type="checkbox" name="lang" id="deutsch">
+                <label for="deutsch">Deutsch</label>
+            </div>
+            
+        </div>
+        <div class="btn-container">
+            <input type="submit" value="Save">
+            <input type="reset" value="Clear">
+        </div>
+
+
+
+        
+
+
+
+    </form>
+</body>
+</html>

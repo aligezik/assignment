@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://cdn.pixabay.com/photo/2022/11/24/02/28/clouds-7613361_960_720.png);
+    text-align: center;
+    background-size: cover;
+}
+h1{
+    height: 108px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    padding: 30px 0;
+}
+form{
+    display: inline-block;
+    height: 368px;
+    width: 554px;
+    padding: 50px;
+    background-color: red;
+    border-radius: 10px;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 5px 20px 2px;
+}
+.box-1{
+    height: 75px;
+    width: 454px;
+    text-align: left;
+}
+label{
+    display: inline-block;
+    width: 150px;
+    height: 24px;
+    font-family: Barlow;
+    font-size: 20px;
+}
+input{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.right{
+    height: 45px;
+    width: 300px;
+    border: 1px solid  #7A7979;
+    margin: 0 0 30px 0;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    
+}
+.last{
+    border-radius: 10px;
+    text-align: center;
+    background-color:  #DDA0DD;
+    height: 43px;
+    width: 125.594px;
+    margin: 0 20px 0 0;
+    padding: 10px 40px 10px 40px;
+    cursor: pointer;
+    border: none;
+}
+.last:hover{
+    background-color: #800080;
+    color: white;
+}
