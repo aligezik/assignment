@@ -1,0 +1,32 @@
+.box{
+    width: 7rem;
+    height: 4rem;
+    border:1px solid black;
+}
+.box1{
+    background-color: brown;
+    position:absolute;
+    left:50px;
+   
+}
+.box2{
+    background-color: rgb(26, 181, 160);
+    position:absolute;
+    left:70px;
+    top:20px;
+    z-index:1;
+
+}
+.box3{
+    background-color: rgb(208, 121, 14);
+    position:absolute;
+    z-index:-2
+
+}
+.box4{
+    background-color: rgb(117, 11, 93);
+    position:absolute;
+    left:60px;
+    top:35px;
+    z-index:-5;
+}
