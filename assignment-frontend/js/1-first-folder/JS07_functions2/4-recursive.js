@@ -14,3 +14,12 @@ console.log("****** 4 - RECURSION ********")
 
 //? FIBONACCI terimleri:  1, 1, 2, 3, 5, 8, 13, 21, ...
 //! f(n) = f(n-1) + f(n-2)
+
+const fibo = (n) => {}
+
+const n = +prompt("Please enter n:")
+if (n <= 0) {
+  console.log("n should be bigger than zero")
+} else {
+  console.log(`FIBONACCI(${n}) = ${fibo(n)}`)
+}

@@ -44,6 +44,34 @@ console.log("*** 3-ARROW ****")
 
 // console.log("AGE:", calculateAge(1935))
 
-const calculateAge = (year) => new Date().getFullYear() - year
+// const calculateAge = (year) => new Date().getFullYear() - year
 
-console.log("AGE:", calculateAge(1990))
+// console.log("AGE:", calculateAge(1990))
+
+
+// fibo(6) => 8
+
+const fibo = (n) => {
+    let fib1 = 1
+    let fib2 = 1
+    let sum = 0
+    
+    for(let i = 2; i < n; i++) {
+        sum = fib1 + fib2
+        fib1 = fib2
+        fib2 = sum
+    }
+
+    return sum;
+} 
+
+const n = prompt("Please enter n: ")
+if ( n <= 0 ){
+    console.log("Enter a postive number");
+}
+else{
+    console.log(`FIBONACCI(${n}) = ${fibo(n)}`);
+}
+
+
+
