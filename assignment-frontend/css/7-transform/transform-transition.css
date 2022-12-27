@@ -1,0 +1,10 @@
+.yazi{
+    text-align: center;
+    font-size: 2rem;
+    margin:2rem auto;
+    width: 50vw;
+}
+.yazi1:hover{
+    background-color: chocolate;
+    transform: rotateX(90deg);
+}
