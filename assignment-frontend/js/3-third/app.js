@@ -61,6 +61,13 @@ console.log(str4);
 
 let str = "Hello World"
 
-for(i= str.length-1; i>=; i--; ){
+for(i= str.length - 1; i>=0; i--){
     console.log(str[i]);
 }
+
+let ttt = "hello world I\"m developer";
+
+console.log(ttt.slice(10, 24));
+console.log(ttt.slice(ttt.lengt,-2));
+console.log(ttt.substring(10,24));
+console.log(ttt.substring(-3));
