@@ -73,7 +73,13 @@
 // console.log(ttt.substring(-3));
 
 let scores = [15, 21, 18, 42, 17];
-let dScores = scores.splice(0, 3);
+let dScores = scores.splice(1, 0, '13');
 
 console.log(scores);
 // console.log(dScores);
+
+let colors = ['red', 'green', 'blue'];
+let deletedColors = colors.splice(2, 0, 'purple', 'orange')
+
+console.log(colors);
+console.log(deletedColors);
