@@ -83,3 +83,5 @@ let deletedColors = colors.splice(2, 0, 'purple', 'orange')
 
 console.log(colors);
 console.log(deletedColors);
+
+//cont
