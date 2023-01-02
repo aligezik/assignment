@@ -1,117 +1,166 @@
-// celcius to fahrenheit calculator#
+// ?==============================================
+// ?            DIZILER (ARRAYS)
+// ?==============================================
 
-// function calFahrenheit(cel){
-//     const fahr =  cel * (9/5)+32
-//     return cel + ` derece `+ fahr + ` fahrenheita esittir`
-// }
+console.log("***** ARRAYS ******")
 
-// console.log(calFahrenheit(30));
+//* Dizi Tanimlama
+//*-----------------------------------------------
 
+// ! 1.Yöntem (Array Literal) - Tercih edilen yöntem
+const names = ["emir", "oğuzhan", "levent", "tarik"]
 
-//belirli bir string ifadenin tersini bulan fonksiyon olustur
+console.log(names)
 
-// let str = 'selamlar'
+//? 4 (names dizisinin lenght property'sine erisiyoruz.)
+//* non-primitive verilerde ozellikler olabilir ve bunlara
+//* erisim . notasyonu ile olabilir.
+console.log(names.length)
 
-// function reverseString(str) {
-//     let str2 = ''
-//     for (let i = str.length - 1; i >= 0; i--) {
-//         str2 += str[i]
-//     }
-//     return str2
-// }
+const x = 5.234 //? primitive
+console.log(x.toFixed(2)) //? object wrapper sayesinde
+//? Primitive'lerde normal sartlarda property olmaz.
 
+//? Ancak JS kullanimi kolaylastirmak icin bazi durumlarda
+//? primitive verileri bir obje sarmlayicisi ile sarmalar.
 
-// console.log(reverseString(`Hello world`));
+console.log(typeof names) //? JS de array aslinda object dedigimiz base object'den turetilmistir.
 
-// const string = `ali`
+const emptArr = []
+console.log(emptArr)
 
-// function reverseString(str) {
+// ! 2.Yöntem (Object Constructor)
+const codingLangs = new Array("C", "C++", "JS", "Go")
+console.log(codingLangs)
 
-// function findVowels(str){
-//     let vowels = ''
+const numbers = new Array(3, 2, 1)
+console.log(numbers) //? (3) [3, 2, 1]
 
-//     for(let i = 0; i < str.length; i++) {
-//         if(
-//             str[i] == 'a' ||
-//             str[i] == 'e' ||
-//             str[i] == 'i' ||
-//             str[i] == 'ı' ||
-//             str[i] == 'u' ||
-//             str[i] == 'ü' ||
-//             str[i] == 'o' ||
-//             str[i] == 'ö' ||
-//         ){
-//             vowels += str[i]
-//         }
-//     }
-//     return vowels
-// }
-// console.log(findVowels('hello world'));
+//? 10 elemanli bos bir dizi olusturur.
+const numbers1 = new Array(10)
+console.log(numbers1) //?(10) [empty × 10]
 
-// let str1 = "hello world";
-// let str2 = 'hello world';
-// let str3 = `hello world`;
-// let str4 = new String("Hello World");
+// ! 3.Yöntem (Array.of())
+const number2 = Array.of(1, 2, 3)
+console.log(number2) //?(3) [1, 2, 3]
 
+const numbers3 = Array.of(5)
+console.log(numbers3) //? [5]
 
+//* Diziden Veri Okuma-Yazma (indisleme)
+//* ----------------------------------------------
+//!  Diziden veri okuma
 
+//? Dizilere erisirken indis(index) yani sira numarasi kullanilir.
+//? indisler 0'dan baslar ve dizinin eleman sayisinin bir eksigine
+//? kadar devam eder.
+//? Syntax => diziAdi[indis]
 
-// console.log(str4.length);
-// console.log(str4);
+const names1 = [
+  "emir",
+  "oğuzhan",
+  "levent",
+  "tarik",
+  "Sabata",
+  "Mehtap",
+  "Rose",
+]
+console.log(names1[1]) //? oğuzhan
+const tarik = names1[3]
+console.log(tarik) //?tarik
 
-// let str = "Hello World"
+//? Dizinin en son elemanini okumak istiyoruz.
+console.log(names1[5]) //? Mehtap, (hard-coded)
 
-// for(i= str.length - 1; i>=0; i--){
-//     console.log(str[i]);
-// }
+const lastEl = names1[names1.length - 1]
+console.log(lastEl) //? Rose
 
-// let ttt = "hello world I\"m developer";
+//? Alternative olarak at() metodu
+console.log(names1.at(-3)) //? Sabata
 
-// console.log(ttt.slice(10, 24));
-// console.log(ttt.slice(ttt.lengt,-2));
-// console.log(ttt.substring(10,24));
-// console.log(ttt.substring(-3));
+//!  Diziye veri yazma
+names1[2] = "Levent"
+// names1[2] = names1[2].toUpperCase()
+//? assigning yapildiginda etki eder.
 
-// let scores = [15, 21, 18, 42, 17];
-// let dScores = scores.splice(1, 0, '13');
+console.log(names1)
 
-// console.log(scores);
-// // console.log(dScores);
+//! Identifier 'names' has already been declared
+// const names = ["ismet", "canan"]
 
-// let colors = ['red', 'green', 'blue'];
-// let deletedColors = colors.splice(2, 0, 'purple', 'orange')
+// names = ["ismet", "canan"] //! Assignment to constant variable.
 
-// console.log(colors);
-// console.log(deletedColors);
+//! NOT: Bir dizi const ile tanimlansada icerisindeki elemanlar
+//! degisitirilebilir. Cunku diziler non-primitive verilerdir.
+//! const ile tanimlanan bir dizinin referansi (baslangic adresini)
+//! stack alaninda tutulurken dizinin elemanlari Heap alaninda tutulur.
+//! Bu yüzden dizinin referansi bilindikten sonra icerisindeki elemanlari
+//! degistirmek mumukundur.
+//! const, sadece dizinin stackte tutulan adresinin degistirilmesini engeller.
 
-const names = [
-    "emir", 
-    "oguzhan", 
-    "levent", 
-    "tarik",
-    "sabata",
-    "mehtap",
-    "rose"
+//! Diziler farkli veri tiplerini bir arada saklayabilir.
+const ageArr = [22, 44, 55]
+const people = [
+  "John",
+  "Varmont",
+  new Date().getFullYear() - 1990,
+  true,
+  ageArr,
 ]
 
-console.log(names);
-console.log(names.length);
+console.log(people[4]) //?(3) [22, 44, 55]
 
-const x = 5.81234 //? practice
-console.log(x.toFixed(2));
-//? primitiveler de normalde property olmaz
+console.log(++people[4][1]) //? 45
 
-console.log(typeof names);
-console.log(names[3]);
-const tarik = names[3];
-console.log(tarik);
-//? dizideki son elemani yazdirma
-console.log(names[names.length - 1]);
-console.log(names.at(3));
-console.log(names[3]);
+console.log(people) //?(3) [22, 45, 55]
+console.log(ageArr) //?  ['John', 'Varmont', 33, true,  [22, 45, 55]]
+ageArr[0]--
 
-console.log(names[2].toLocaleUpperCase('tr'));
+console.log(people) //?(5) ['John', 'Varmont', 33, true, [21, 45, 55])]
 
-// names[2] = (names[2].toLocaleUpperCase('tr'));
-console.log(names[2]);
+//! Bir dizi icerisine baska bir diziyi koyarsak aslinda dizinin
+//! tum verileri kopyalanmaz sadece o dizinin refransi konulur.
+//! Dolayisiyla disarida bu dizideki bir degisikli diger dimizie de yansir.
+//! Cunku JS cogu durumda sig (shallow copying) yapar.
+//?================================================
+//?  DIZIYI DEGISTIREN (MUTATOR) METOTLAR
+//?================================================
 
+//** pop() son elemani siler ve sildigi elemani dondurur.
+const cars = ["BMW", "Mercedes", "Fiat", "Anadol"]
+console.log(cars.pop())
+console.log(cars)
+
+//* push() dizinin sonuna eleman ekler ve dizinin son eleman sayisini dondurur.
+console.log("LEN:", cars.push("Lexus"))
+console.log(cars)
+
+// cars.push = "hyundai" //? diziye yeni bir properyt(degisken) eklendi
+// console.log(cars)
+// console.log(cars.push)
+
+//* unshift dizinin 0. indeksine eleman ekler ve dizinin son eleman sayisini dondurur.
+console.log(cars.unshift("Togg"))
+console.log(cars)
+
+//* dizinin 0. indeks elemanini siler ve silenen elemani dondurur.
+console.log(cars.shift())
+console.log(cars)
+
+//* splice()
+//? 1.parametre: eklenecek indis numarasi
+//? 2.parametre: 0 ise araya ekleme, 1 ise uzerine yazma
+//? 3.parametre: yeni eklenecek veri
+
+cars.splice(1, 0, "VW")
+console.log(cars) //?(5) ['BMW', 'VW', 'Mercedes', 'Fiat', 'Lexus']
+
+cars.splice(3, 1, "Maseratti")
+console.log(cars)
+
+//?================================================
+//?             DIZI ERISIM METOTLARI
+//?================================================
+
+cars.reverse()
+console.log(cars);
