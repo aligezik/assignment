@@ -164,3 +164,9 @@ console.log(cars)
 
 cars.reverse()
 console.log(cars);
+ const numaralar = [1, 12, 4233, 345, 5677, 33]
+
+console.log(numaralar);
+console.log(numaralar.sort());
+
+numaralar.sort()
