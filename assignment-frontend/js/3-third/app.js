@@ -1,52 +1,52 @@
-// // // celcius to fahrenheit calculator#
+// celcius to fahrenheit calculator#
 
-// // // function calFahrenheit(cel){
-// // //     const fahr =  cel * (9/5)+32
-// // //     return cel + ` derece `+ fahr + ` fahrenheita esittir`
-// // // }
+// function calFahrenheit(cel){
+//     const fahr =  cel * (9/5)+32
+//     return cel + ` derece `+ fahr + ` fahrenheita esittir`
+// }
 
-// // // console.log(calFahrenheit(30));
-
-
-// // //belirli bir string ifadenin tersini bulan fonksiyon olustur
-
-// // // let str = 'selamlar'
-
-// // // function reverseString(str) {
-// // //     let str2 = ''
-// // //     for (let i = str.length - 1; i >= 0; i--) {
-// // //         str2 += str[i]
-// // //     }
-// // //     return str2
-// // // }
+// console.log(calFahrenheit(30));
 
 
-// // // console.log(reverseString(`Hello world`));
+//belirli bir string ifadenin tersini bulan fonksiyon olustur
 
-// // // const string = `ali`
+// let str = 'selamlar'
 
-// // // function reverseString(str) {
+// function reverseString(str) {
+//     let str2 = ''
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         str2 += str[i]
+//     }
+//     return str2
+// }
 
-// // function findVowels(str){
-// //     let vowels = ''
 
-// //     for(let i = 0; i < str.length; i++) {
-// //         if(
-// //             str[i] == 'a' ||
-// //             str[i] == 'e' ||
-// //             str[i] == 'i' ||
-// //             str[i] == 'ı' ||
-// //             str[i] == 'u' ||
-// //             str[i] == 'ü' ||
-// //             str[i] == 'o' ||
-// //             str[i] == 'ö' ||
-// //         ){
-// //             vowels += str[i]
-// //         }
-// //     }
-// //     return vowels
-// // }
-// // console.log(findVowels('hello world'));
+// console.log(reverseString(`Hello world`));
+
+// const string = `ali`
+
+// function reverseString(str) {
+
+// function findVowels(str){
+//     let vowels = ''
+
+//     for(let i = 0; i < str.length; i++) {
+//         if(
+//             str[i] == 'a' ||
+//             str[i] == 'e' ||
+//             str[i] == 'i' ||
+//             str[i] == 'ı' ||
+//             str[i] == 'u' ||
+//             str[i] == 'ü' ||
+//             str[i] == 'o' ||
+//             str[i] == 'ö' ||
+//         ){
+//             vowels += str[i]
+//         }
+//     }
+//     return vowels
+// }
+// console.log(findVowels('hello world'));
 
 // let str1 = "hello world";
 // let str2 = 'hello world';
@@ -72,16 +72,46 @@
 // console.log(ttt.substring(10,24));
 // console.log(ttt.substring(-3));
 
-let scores = [15, 21, 18, 42, 17];
-let dScores = scores.splice(1, 0, '13');
+// let scores = [15, 21, 18, 42, 17];
+// let dScores = scores.splice(1, 0, '13');
 
-console.log(scores);
-// console.log(dScores);
+// console.log(scores);
+// // console.log(dScores);
 
-let colors = ['red', 'green', 'blue'];
-let deletedColors = colors.splice(2, 0, 'purple', 'orange')
+// let colors = ['red', 'green', 'blue'];
+// let deletedColors = colors.splice(2, 0, 'purple', 'orange')
 
-console.log(colors);
-console.log(deletedColors);
+// console.log(colors);
+// console.log(deletedColors);
 
-//cont
+const names = [
+    "emir", 
+    "oguzhan", 
+    "levent", 
+    "tarik",
+    "sabata",
+    "mehtap",
+    "rose"
+]
+
+console.log(names);
+console.log(names.length);
+
+const x = 5.81234 //? practice
+console.log(x.toFixed(2));
+//? primitiveler de normalde property olmaz
+
+console.log(typeof names);
+console.log(names[3]);
+const tarik = names[3];
+console.log(tarik);
+//? dizideki son elemani yazdirma
+console.log(names[names.length - 1]);
+console.log(names.at(3));
+console.log(names[3]);
+
+console.log(names[2].toLocaleUpperCase('tr'));
+
+// names[2] = (names[2].toLocaleUpperCase('tr'));
+console.log(names[2]);
+
