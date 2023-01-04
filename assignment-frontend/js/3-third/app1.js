@@ -106,3 +106,7 @@ const findStudentForOf = (name) => {
 console.log(findStudentForOf("MehMet"))
 console.log(findStudentForOf("ismet"))
 console.log(findStudentForOf("feyza"))
+
+const names1 = [
+    ""
+  ]
