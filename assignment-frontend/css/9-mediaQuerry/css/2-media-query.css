@@ -1,0 +1,65 @@
+@import "theme.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--white);
+  font-family: var(--ff-roboto);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 200px;
+}
+
+button {
+  border: 2px solid var(--red-dark);
+  border-radius: 5px;
+  box-shadow: var(--shadow-light);
+  padding: 1rem 1.2rem;
+  font-family: var(--ff-yeon);
+  font-size: var(--fs-lg);
+  margin: 1rem 0.5rem;
+  white-space: nowrap;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(0.97);
+}
+
+.btn-light {
+  background-color: var(--white);
+  color: var(--red-dark);
+}
+
+.btn-dark {
+  background-color: var(--red-dark);
+  color: var(--white);
+}
+
+nav.hero {
+    display: flex;
+    flex-wrap: wrap;
+}}
+
+nav.hero img{
+    width: 20%;
+}
