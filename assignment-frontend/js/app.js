@@ -1,4 +1,4 @@
-let email = "bilgepanter@gmail.com"
+let email = "aligezik@gmail.com"
 let firstName = "Ali"
 let lastName = "Gezik"
 
@@ -19,6 +19,18 @@ console.log(email.slice(0, (email.search("@"))));
 
 let DOMAIN = email.slice(email.indexOf("@")+1, email.indexOf("."))
 
+console.log(email.indexOf("."));
 console.log(DOMAIN);
 
-console.log(email.indexOf("."));
+console.log(email.replace(DOMAIN, "bilgepanter"))
+email = email.replace(DOMAIN, "bilgepanter")
+
+console.log("\n++++\n\nartik yeni domain\n\n++++\n \n");
+
+console.log(email);
+
+console.log(email.includes("@")); //! sadece boolean deger verir
+
+
+console.log(email.endsWith("com"));
+console.log(email.startsWith("com"));
