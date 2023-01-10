@@ -34,3 +34,17 @@ console.log(email.includes("@")); //! sadece boolean deger verir
 
 console.log(email.endsWith("com"));
 console.log(email.startsWith("com"));
+
+let fullName = `
+${firstName[0].toUpperCase()}${firstName.slice(1)} ${lastName[0].toUpperCase()}${lastName.slice(1)}
+`
+
+console.log(fullName);
+
+console.log(document.URL);
+
+console.log(document.head);
+console.log(document.title);
+console.log(document.body);
+
+document.body.style.backgroundColor = "black";
