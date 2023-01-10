@@ -49,3 +49,24 @@ console.log(document.body);
 
 document.body.style.backgroundColor = "black";
 document.body.style.color = "yellow";
+
+console.log("MOLA");
+
+// let title = document.getElementsByTagName("h2");
+
+// console.log(title.title.innerHTML);
+
+let title = document.getElementById("title");
+title.innerText = "Degisen Bilgimiz"
+
+
+console.log(title.innerText);
+
+let link = document.querySelector("ul#list>li>a");
+
+link.innerHTML += "ni degistiriyorum"
+
+console.log(link.innerHTML);
+
+link.style.backgroundColor = "green";
+link.classList.add("butoon");
