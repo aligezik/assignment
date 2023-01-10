@@ -121,3 +121,36 @@ header{
     }
 
 }
+
+.article{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+
+
+    .article1{
+        background-color: grey;
+        width: 50%;
+        height: 10rem;
+        border-radius: 5px;
+        border: 2px solid black;
+
+    } 
+    .article2{
+
+
+
+    }
+}
+
+
+
+footer{
+    $dark:2;
+
+    p{
+        background-color: red;
+    }
+
+
+}
