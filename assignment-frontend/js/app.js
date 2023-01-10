@@ -70,3 +70,9 @@ console.log(link.innerHTML);
 
 link.style.backgroundColor = "green";
 link.classList.add("butoon");
+
+console.log(Math.sqrt(81));
+
+function movie(title, director) {
+
+    this.title
