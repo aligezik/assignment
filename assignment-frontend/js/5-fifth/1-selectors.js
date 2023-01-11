@@ -245,3 +245,4 @@ herNumbers.push(-55)
 console.log(hisNumbers);
 console.log(herNumbers);
 
+//* ilki ikincisini eziyor
