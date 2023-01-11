@@ -71,8 +71,52 @@ console.log(link.innerHTML);
 link.style.backgroundColor = "green";
 link.classList.add("butoon");
 
-console.log(Math.sqrt(81));
+// console.log(Math.sqrt(81));
 
-function movie(title, director) {
+// function istek(){
+//     var kelime = prompt("Please enter a word...", "ikinci kelime")
+//     document.write(kelime)
+// }
 
-    this.title
+// console.log(istek());
+// console.log(typeof istek());
+
+// let isim = prompt("Adinizi giriniz")
+
+// console.log("Merhaba, " + isim);
+
+let one = document.getElementById("walterwhite");   
+
+console.log(one);
+console.log(one.innerText);
+console.log(one.innerHTML, "merhaba", one.innerText);
+
+let two = document.getElementsByClassName("alternate");
+
+console.log(two);
+console.log(two.innerHTML, two.innerText);
+
+for (let i = 0; i < two.length; i++){
+    two[i].style.color = "red";
+}
+
+let liste = document.querySelector("li");
+
+let urun = document.querySelector("#veri");
+let ekle = document.querySelector("#ekle");
+
+ekle.addEventListener("click", function(){
+    let li = document.createElement("li");
+
+    li.textContent = veri.value;
+
+    liste.appendChild(li);
+
+    veri.value = "";
+}
+
+
+
+
+
+)
