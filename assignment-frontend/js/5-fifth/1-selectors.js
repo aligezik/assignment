@@ -213,3 +213,35 @@ const showName = (name, surname, ...titles) => {
 }
 
 showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad")
+
+
+
+const flyingVehicles = ["aircraft", "helicopter", "drone"]
+const automobile = ["truck","suv", "car"]
+const allVehicles = [flyingVehicles, ...automobile]
+const allVehicles1 = [...flyingVehicles, "bike", ...automobile]
+
+console.log(allVehicles); //* 2 elemanli bir dizi oldu
+console.log(allVehicles1); //* 3 nokta koyunca dizi haline getiriyor arrayi
+
+let buryan = "Buryan yemegi flan filan iste"
+const charBuryan = [...buryan]
+console.log(...buryan);
+console.log(charBuryan);
+
+console.log(Math.max(1, 2, 3, 33, 4, 5))
+const numbers = [3, 1, 23 ,49, 52, 44]
+
+console.log(Math.max(...numbers));
+
+const myNumbers = [3, 5, 5, [7, 8]]
+const herNumbers = [-5, -4, ...myNumbers, -22]
+
+console.log(myNumbers);
+console.log(herNumbers);
+
+const hisNumbers = [...herNumbers]
+herNumbers.push(-55)
+console.log(hisNumbers);
+console.log(herNumbers);
+
