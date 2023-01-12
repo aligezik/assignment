@@ -1,113 +1,83 @@
-let email = "aligezik@gmail.com";
-let firstName = "Ali";
-let lastName = "Gezik";
+console.log("***** SELECTORS *****")
 
-console.log(email.length);
+document.title = "❤️ DOM"
 
-console.log(firstName[0]);
-console.log(firstName.charAt(1));
-console.log(firstName[2]);
-console.log(firstName.toUpperCase());
-console.log(firstName.toLowerCase());
+//*===========================================
+//*            GETELEMENTBYID()
+//*===========================================
 
-console.log(email.search("@")); //? baslangic indexi
-console.log(email.search("#")); //! yeri yoksa -1 gelir
+const myHeader = document.getElementById("header")
+console.log(myHeader)
 
-console.log(email.slice());
-console.log(email.slice(email.search("@") + 1));
-console.log(email.slice(0, email.search("@")));
+myHeader.style.color = "blue"
+myHeader.style.backgroundColor = "yellow"
 
-let DOMAIN = email.slice(email.indexOf("@") + 1, email.indexOf("."));
+const button = document.getElementById("btn")
+const textInput = document.getElementById("input")
+button.style.backgroundColor = "black"
+button.style.color = "yellow"
+button.style.padding = "0.7rem"
+button.style.border = "none"
+button.style.borderRadius = "10px"
+button.style.fontSize = "20px"
+textInput.style.padding = "0.7rem"
 
-console.log(email.indexOf("."));
-console.log(DOMAIN);
+//*===========================================
+//*          GETELEMENTSBYTAGNAME()
+//*===========================================
+const list = document.getElementsByTagName("li")
+console.log(list) //? HTMLCollection(5) [li.list, li.list, li.list, li.list, li.list]
 
-console.log(email.replace(DOMAIN, "bilgepanter"));
-email = email.replace(DOMAIN, "bilgepanter");
+list[0].style.color = "magenta"
+list[list.length - 1].style.color = "purple"
 
-console.log("\n++++\n\nartik yeni domain\n\n++++\n \n");
+const header = document.getElementsByTagName("header")
+console.log(header[0])
 
-console.log(email);
+console.log(list.item(3))
+//! getElementsByTagName bize bir HTMLCollection(bir nevi dizi) dondurur.
 
-console.log(email.includes("@")); //! sadece boolean deger verir
+//! Icerik degistirme (textContent, innerText, innerHTML)
+// list[3].textContent = "REACT / VUE"
+// list[3].innerText = "REACT / VUE / Swelte"
+list[3].innerHTML = "REACT / VUE / Swelte / Angular"
 
-console.log(email.endsWith("com"));
-console.log(email.startsWith("com"));
+console.log(list[2].textContent) //? Javascript - JS is an object-based language
+//? textContent HTML elementinin tum yazi dugumlerini CSS veya HTML 'e bakmasizin verir.
 
-let fullName = `
-${firstName[0].toUpperCase()}${firstName.slice(
-  1
-)} ${lastName[0].toUpperCase()}${lastName.slice(1)}
-`;
+console.log(list[2].innerText) //? innerText CSS parse islemi yaparak yazi elementi dondurur.
 
-console.log(fullName);
+console.log(list[2].innerHTML) //? innerHTML tamamen HTML parse islemi yaparak elementlere ulasmamizi saglar
 
-console.log(document.URL);
+list[4].innerHTML += `<li><a class="link" href="https://www.clarusway.com">CW</a></li>`
 
-console.log(document.head);
-console.log(document.title);
-console.log(document.body);
+//? HTML kodlarini calistirir. (Guvenlik acisindan problemli)
 
-document.body.style.backgroundColor = "black";
-document.body.style.color = "yellow";
+//*===========================================
+//*          GETELEMENTSBYCLASSNAME()
+//*===========================================
 
-console.log("MOLA");
+const itemList = document.getElementsByClassName("list")
+console.log(itemList) //?HTMLCollection [section.item-list]
+console.log(itemList)
 
-// let title = document.getElementsByTagName("h2");
+//? Array.from() (HTMLCollection -> Array)
+const itemListArr = Array.from(itemList)
+console.log(...itemList)
+itemListArr.forEach((x) => console.log(x))
 
-// console.log(title.title.innerHTML);
+//? SPREAD (HTMLCollection -> Array)
+const itemListSpread = [...itemList]
+console.log(itemListSpread)
+itemListSpread.map((x) => console.log((x.style.color = "red")))
+//* ========================================
+//*              QUERYSELECTOR()
+//* ========================================
 
-let title = document.getElementById("title");
-title.innerText = "Degisen Bilgimiz";
+const addBtnType = document.querySelector("input[type='button']");
+console.log(addBtnType.value);
 
-console.log(title.innerText);
+//* ========================================
+//*              QUERYSELECTORALL()
+//* ========================================
 
-let link = document.querySelector("ul#list>li>a");
-
-link.innerHTML += "ni degistiriyorum";
-
-console.log(link.innerHTML);
-
-link.style.backgroundColor = "green";
-link.classList.add("butoon");
-
-// console.log(Math.sqrt(81));
-
-// function istek(){
-//     var kelime = prompt("Please enter a word...", "ikinci kelime")
-//     document.write(kelime)
-// }
-
-// console.log(istek());
-// console.log(typeof istek());
-
-// let isim = prompt("Adinizi giriniz")
-
-// console.log("Merhaba, " + isim);
-
-let one = document.getElementById("walterwhite");
-
-console.log(one);
-console.log(one.innerText);
-console.log(one.innerHTML, "merhaba", one.innerText);
-
-let two = document.getElementsByClassName("alternate");
-
-console.log(two);
-console.log(two.innerHTML, two.innerText);
-
-for (let i = 0; i < two.length; i++) {
-  two[i].style.color = "red";
-}
-
-let liste = document.querySelector("li");
-
-let urun = document.querySelector("#veri");
-let ekle = document.querySelector("#ekle");
-
-ekle.addEventListener("click", function () {
-  let li = document.createElement("li");
-  li.textContent = veri.value;
-  liste.appendChild(li);
-  veri.value = "";
-});
