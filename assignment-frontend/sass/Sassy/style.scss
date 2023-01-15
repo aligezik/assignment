@@ -6,29 +6,40 @@
 
 $bgColor: pink;
 $fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-$fontSize:1.2rem;
-$navBgColor:#30a7c3;
+$fontSize: 1.2rem;
+$navBgColor: #30a7c3;
 $bannerBgColor: hotpink;
 $myBorder: 2px solid brown;
 $fontColor: white;
-
 
 body {
   background-color: $bgColor;
   font-family: $fontFamily;
   font-size: $fontSize;
   color: $fontColor;
-
 }
 
-header{
+header {
   background-color: $navBgColor;
   display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
 
-  img{
+  img {
     width: 80px;
     border: $myBorder;
     border-radius: 10px;
- 
+  }
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 0.5rem;
+    }
+  }
+  a {
+    color: $fontColor;
+    text-decoration: none;
   }
 }

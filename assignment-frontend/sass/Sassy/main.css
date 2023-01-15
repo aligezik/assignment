@@ -14,11 +14,25 @@ body {
 header {
   background-color: #30a7c3;
   display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
 }
 header img {
   width: 80px;
   border: 2px solid brown;
   border-radius: 10px;
+}
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+header a {
+  color: white;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */
