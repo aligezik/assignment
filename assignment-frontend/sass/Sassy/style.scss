@@ -8,9 +8,10 @@ $bgColor: pink;
 $fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 $fontSize: 1.2rem;
 $navBgColor: #30a7c3;
-$bannerBgColor: hotpink;
+$bannerBgColor: black;
 $myBorder: 2px solid brown;
-$fontColor: white;
+$fontColor: yellow;
+$buttonColor: rgb(227, 160, 160);
 
 body {
   background-color: $bgColor;
@@ -36,10 +37,126 @@ header {
     li {
       display: inline-block;
       padding: 0.5rem;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   a {
     color: $fontColor;
     text-decoration: none;
+  }
+}
+
+//!!!!!!!! BANNER
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bannerBgColor;
+  padding: 1rem;
+  line-height: 2rem;
+
+  aside {
+    button {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+      background-color: $buttonColor;
+      color: $fontColor;
+      margin: 1rem 0.5rem 0 0;
+      &:hover {
+        background-color: pink;
+        cursor: pointer;
+        font-weight: 700;
+      }
+    }
+  }
+
+  img {
+    width: 30%;
+    min-width: 250px;
+    max-width: 400px;
+  }
+}
+//!! CARDS
+@mixin myBox($backColor, $color) {
+  background-color: $backColor;
+  color: $color;
+  width: 25%;
+  height: 15rem;
+  border: $myBorder;
+  border-radius: 5px;
+}
+
+.cards {
+  display: flex;
+  // justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  .card1 {
+    @include myBox(yellow, red);
+  }
+  .card2 {
+    @include myBox(brown, yellow);
+  }
+  .card3 {
+    @include myBox(aqua, red);
+  }
+  .card4 {
+    @include myBox(magenta, white);
+  }
+}
+
+//! EXTEND
+
+.articles {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  .article1 {
+    background-color: grey;
+    width: 50%;
+    height: 10rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 1rem;
+  }
+  .article2 {
+    @extend .article1;
+    background-color: hotpink;
+    border-color: green;
+  }
+}
+
+//! FOOTER
+
+footer {
+  $dark: 2;
+  p {
+    @if $dark==1 {
+      background-color: gray;
+    } @else if $dark==2 {
+      background-color: black;
+      color: yellow;
+      padding: 0.1rem;
+    } @else {
+      background-color: orangered;
+    }
+  }
+  .social-icons {
+    display: flex;
+    height: 10rem;
+    $textColor: #990000, #55004e, #0fa8a1, #121456, #64c217;
+
+    @for $i from 1 through 5 {
+      .social#{$i} {
+        width: 20%;
+        background-color: lighten(tomato, $i * 5);
+        font-size: $i * 0.8rem;
+        color: nth($textColor, $i);
+      }
+    }
   }
 }
