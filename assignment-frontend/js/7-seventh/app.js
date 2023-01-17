@@ -62,6 +62,4 @@ window.onload = function () {
 //   }
 // }
 
-
-
 // newLi.addEventListener('dblclick', )
