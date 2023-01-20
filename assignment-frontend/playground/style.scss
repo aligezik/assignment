@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+$bgColor : black;
+$fontColor: yellow;
+$fontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontStyle: center;
+
+body{
+    background-color: $bgColor;
+    color: $fontColor;
+    font-family: $fontFamily;
+    text-align: $fontStyle;
+    margin: 10% auto;
+}
