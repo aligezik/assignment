@@ -1,0 +1,16 @@
+.container {
+    width: 400px;
+    height: 200px;
+    background-color: rgb(77, 168, 168);   
+}
+
+.div1{
+    width: 100px;
+    height: 60px;
+    background-color: blueviolet;
+    margin: 20px;
+}
+.btn{
+    padding: 10px;
+    margin: 20px;
+}
