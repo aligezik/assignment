@@ -1,12 +1,36 @@
-/*! -------------- 1- NAVBAR ---------------- */
-.navbar{
-    fonst-size: 1.3rem;
+:root{
+    --red:#dc3545;
 }
 
 
+/*! -------------- 1- NAVBAR ---------------- */
+.navbar{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.nav-link{
+    transition: color 0.7s;
+}
+
+.nav-link:hover{
+    color: var(--red);
+}
+
+.nav-link.active{
+    color: green !important;
+}
 
 
 /*! ------------- 2- CAROUSEL --------------- */
+.carousel-item{
+    max-height: calc(100vh - 93px);
+}
+
+.carousel-caption .btn{
+    width: 5rem;
+}
+
 
 /*! ------------ 3- ABOUT SECTION ----------- */
 
