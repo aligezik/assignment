@@ -51,3 +51,8 @@ const zamTop = salaries
   .map((s) => Math.trunc(s * 1.1))
   .reduce((s, t) => s + t, 0)
 console.log(`toplam yapilan zam`, zamTop);
+
+
+//! OBJECTS
+
+
