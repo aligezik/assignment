@@ -55,15 +55,15 @@
 
 // }while(again === "e" || again === "E");
 
-let result
-let line = ""
+// let result
+// let line = ""
 
-for (let row = 1; row <= 10; row++){
-        for(let col = 1; col <= 10; col++){
-                result = row * col
-                line += result + "\t" // bir ta tusu ekle
-        }
-        line += "\n" // bir ta tusu ekle
-}
+// for (let row = 1; row <= 10; row++){
+//         for(let col = 1; col <= 10; col++){
+//                 result = row * col
+//                 line += result + "\t" // bir ta tusu ekle
+//         }
+//         line += "\n" // bir ta tusu ekle
+// }
 
-console.log(line);
+// console.log(line);
