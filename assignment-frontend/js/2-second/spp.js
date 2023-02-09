@@ -67,3 +67,23 @@
 // }
 
 // console.log(line);
+
+const cities = [
+        {name: 'Los Angeles', population: 3792621},
+        {name: 'Chicago', population: 2695598},
+        {name: 'New York', population: 8175133},
+        {name: 'Houston', population: 2099451},
+        {name: 'Philadelphia', population: 1526006}
+      ];
+
+//       const x = cities.filter((cities => {
+//         return cities.population < 3000000;
+//       }))
+//       console.log(x);
+
+      //! filter sort map forEach
+      cities
+        .filter(ab => ab.population < 3000000)
+        .sort((a, b) => a.population - b.population)
+        .map((ab) => `${ab.name}:${ab.population}`)
+        .forEach((c) => console.log(c));
