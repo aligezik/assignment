@@ -11,8 +11,8 @@ const setTime = () => {
 
   //! React Element without JSX
   const reactElement = React.createElement(
-    "div",
-    null,
+    "div", //div olustur
+    null, //props u atla
     React.createElement("h1", null, "React"),
     React.createElement("p", null, new Date().toLocaleTimeString())
   );
