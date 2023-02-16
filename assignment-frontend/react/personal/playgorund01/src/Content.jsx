@@ -17,7 +17,7 @@ const Content = () => {
     }
 
     return (
-        <div>
+        <div className="content-div">
             <h2 style={{ color: "white", backgroundColor: "red" }}>React Js</h2>
             <p style={pStyle}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, laborum!</p>
 
