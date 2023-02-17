@@ -1,10 +1,10 @@
 .title{
-    text-align: center;
     color: white;
+    text-align: center;
     background-color: red;
 }
 .images{
+    width: 300px;
     display: block;
     margin: 1rem auto;
-    width: 300px;
 }
