@@ -10,7 +10,7 @@ Project aims to create a real checkout page of e-commerce website.
 
 At the end of the this project, students will be able to;
 
-- analyze a problem, create e-commerce website page.
+- analyze a problem,s create e-commerce website page.
 
 - demonstrate their knowledge of algorithmic design principles for dynamic calculation of product's cart.
 
