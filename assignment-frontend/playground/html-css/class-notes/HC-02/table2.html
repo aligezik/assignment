@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablo örneği</title>
+
+    <style>
+      th {
+        background-color: blueviolet;
+      }
+
+      td {
+        text-align: center;
+        background-color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Tablo örnek</h1>
+
+    <table border="1" width="100%">
+      <h3>Costumer Information Table</h3>
+
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th colspan="2">Jobs</th>
+          <!-- <th>Jobs</th> -->
+          <th>Working Experiance</th>
+        </tr>
+        <tr>
+          <th>a</th>
+          <th>b</th>
+          <th style="background-color: tomato">c</th>
+          <th>d</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Henry</td>
+          <td colspan="2">Senior Developer</td>
+          <!-- <td>Senior Developer</td> -->
+          <td rowspan="2">5 year</td>
+        </tr>
+
+        <tr>
+          <td>Jason</td>
+          <td>Sofware Engineer</td>
+          <td>FullStack Developer</td>
+          <!-- <td>5 years</td> -->
+        </tr>
+
+        <tr>
+          <td>Fred</td>
+          <td>Junior Developer</td>
+          <td>Backend Developer</td>
+          <td>2 year</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

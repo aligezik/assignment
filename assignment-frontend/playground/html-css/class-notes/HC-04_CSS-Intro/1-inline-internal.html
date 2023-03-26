@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internal-Inline</title>
+    <style>
+      img {
+        width: 50%;
+        border: 2px solid red;
+        border-radius: 50%;
+        border-style: dotted;
+      }
+      /* Class'a gore secim */
+      .img-div {
+        text-align: center;
+      }
+      #par {
+        color: purple;
+        font-family: "Courier New", Courier, monospace;
+        text-align: justify;
+        font-weight: 400;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+   * Inline CSS, HTML elementlerine style keyword'u ile eklenir.
+   * style kelimesinin ici aslinda CSS alanidir.
+   * Sadece eklenen element icin bir stillendirme gerceklestirir.
+   * Bu sebeple cok pratik bir yontem degildir.
+   * HTML kodlarini kalabaliklastirdigi icin kodun gorunumunu karmasiklastirir.
+ -->
+
+    <h1 style="color: red; text-align: center">Using CSS</h1>
+
+    <p style="background-color: lightgreen">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum distinctio
+      iure provident? Tenetur sint quae, nisi dolorum error iste dolorem nobis
+      fugit repellat adipisci placeat esse voluptate molestias natus asperiores!
+    </p>
+
+    <div class="img-div">
+      <img
+        src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cml2ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+        alt=""
+      />
+
+      <img
+        src="https://images.unsplash.com/photo-1506355683710-bd071c0a5828?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cml2ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60"
+        alt=""
+      />
+    </div>
+
+    <p id="par">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, omnis
+      aperiam quaerat vitae nemo rerum beatae saepe placeat sequi et.
+    </p>
+  </body>
+</html>

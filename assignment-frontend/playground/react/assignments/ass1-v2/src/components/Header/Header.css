@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap");
+
+.nav{
+  background-color: rgb(244, 164, 96,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 12vh;
+  padding: 1rem;
+}
+header h1{
+  text-align: center;
+  font-family: "Rubik Vinyl", cursive;
+}

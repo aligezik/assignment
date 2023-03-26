@@ -1,0 +1,109 @@
+html {
+  /*? Default font-size 16px */
+  /* font-size: 20px; */
+  /* * default fontsize=20px */
+}
+
+h1 {
+  /*? Degistirilmedigi surece h1'in buyuklugu default font-size'ın 2 katidir. 16x2 = 32px*/
+  color: red;
+  /* font-size: 50px; */
+}
+p.first {
+  /*? p'nin size default font-size a eşittir.; */
+  font-size: 30px;
+}
+
+/****** UNITS *****/
+
+/** Mutlak olcu birimleri px, mm,cm,m, inch */
+p.abs {
+  font-size: 20px;
+  font-size: 1cm;
+}
+
+p.percent {
+  font-size: 200%;
+  /*? 16px * 2  = 32px  */
+}
+
+/*!  EM olcu biriminde bir html elemaninin font size'i parent'in font-size'ina gore oranlanir. */
+.div1 {
+  /*?  Parent'in (html) 1 katina esittir (16 px) */
+  font-size: 1em;
+}
+.div2 {
+  font-size: 2em;
+  /*? Parent'in (div1) font-size'nin 2 kati */
+}
+.div3 {
+  font-size: 3em;
+  /*? Parent'in (div2) font-size'nin 3 kati 32px * 3 = 96px*/
+}
+
+/*!  REM olcu biriminde bir html elemaninin font size'i root elemaninin  font-size ina gore oranlanir. */
+
+.div4 {
+  font-size: 1rem; /*?  16px * 1 = 16px */
+}
+
+.div5 {
+  font-size: 2rem; /*?  16px * 2 = 32px */
+}
+
+.div6 {
+  font-size: 3rem; /*?  16px * 3 = 48px */
+}
+
+/****** TEXT STYLE *****/
+
+p.text-style {
+  font-style: italic; /*? normal | italic | oblique*/
+  text-align: justify; /*? center | left | right*/
+  font-weight: 900;
+  /* font-weight: bold; */
+  /* font-weight: bolder; */
+  font-variant: small-caps;
+}
+
+p.text-style .elit {
+  color: red;
+
+  /*? Decoration */
+  text-decoration: line-through; /** ust cizgili*/
+  text-decoration: overline; /** uzeri cizgili*/
+  text-decoration: underline; /** alti cizgili*/
+  text-decoration: none; /** cizgi yok*/
+}
+
+div.transformation p {
+  font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  text-transform: capitalize; /*? ilk hafler buyuk*/
+  text-transform: lowercase; /*? tamami kucuk harf*/
+  text-transform: uppercase; /*? tamami buyuk harf*/
+  text-transform: none; /*? transform yok*/
+}
+
+div.transformation p.indent {
+  text-indent: 20px; /*? Girinti mesafesi */
+}
+
+.spacing {
+  line-height: 1.5; /*? satir yuksekligi*/
+  word-spacing: 10px; /*? kelimeler arasi bosluk*/
+  letter-spacing: 5px; /*? harfler arasi bosluk*/
+  direction: rtl; /*? yazim yonu*/
+}
+
+.shadow {
+  padding: 1rem;
+  margin-bottom: 5rem;
+  background-color: antiquewhite;
+  box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.shadow h2 {
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+}

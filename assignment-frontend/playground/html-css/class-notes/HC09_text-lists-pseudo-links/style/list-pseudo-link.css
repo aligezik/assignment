@@ -1,0 +1,94 @@
+* {
+  margin: 0px;
+  /* padding: 0; */
+}
+/****** LISTS *****/
+
+.languages {
+  /*? none | disc | circle |square | decimal etc. */
+  list-style-type: square;
+  list-style-position: inside;
+  /* padding: 0; */
+  /* margin-left: 20px; */
+  /* list-style-image: linear-gradient(to left bottom, red, blue); */
+  list-style-image: url("../img/house-solid.svg");
+}
+
+/*** FONTAWESOME ****/
+
+.awesome {
+  color: red;
+  font-size: 1rem;
+}
+
+/******  PSEUDO CLASSES *******/
+ul.pseudo li {
+  list-style-type: none;
+  background-color: aliceblue;
+  border: 1px solid grey;
+  width: 10rem;
+}
+
+ul.pseudo li:first-child {
+  background-color: antiquewhite;
+  color: red;
+}
+
+ul.pseudo li:nth-child(even) {
+  background-color: green;
+  color: white;
+}
+
+ul.pseudo li:last-child {
+  background-color: rgb(225, 133, 13);
+  color: white;
+}
+
+ul.pseudo li:nth-child(4) {
+  background-color: purple;
+  color: white;
+}
+
+/* ul.pseudo li:nth-child(odd) {
+  background-color: grey;
+  color: white;
+} */
+
+ul.pseudo li:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+ul.pseudo li:active {
+  font-weight: 900;
+}
+
+/******  PSEUDO ELEMENTS *******/
+/*? Pseudo Elements ::before , ::after , ::first-line, ::first-letter*/
+
+/** Pseudo elementler html de var olmayan bir element eklememizi ve stillendirmemizi saglayan elementler gibi dusunulebilir.*/
+
+ul.pseudo li::before {
+  content: "❤️";
+}
+
+ul.pseudo li::after {
+  content: "💲";
+}
+ul.pseudo li:nth-child(3)::before {
+  content: "🥳";
+}
+
+ul.pseudo li:last-child::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  content: "\f662";
+}
+
+.ps-elements::first-line {
+  font-weight: 900;
+}
+
+.ps-elements::first-letter {
+  font-size: 200%;
+}

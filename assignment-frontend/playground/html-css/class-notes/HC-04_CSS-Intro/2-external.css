@@ -1,0 +1,36 @@
+* {
+  /* Universal selector */
+  background-color: azure;
+}
+
+/* override -> ezme */
+/* body {
+  background-color: antiquewhite;
+} */
+
+h1 {
+  color: red;
+}
+
+h1:hover {
+  /*! Saydamlik katsayisi */
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+  color: blueviolet;
+}
+
+/** her bir li'nin üzerine fare ile gelindiginde calisan kod */
+li:hover {
+  color: purple;
+  font-weight: 800;
+
+  /*! Cursor el sekilnde gozuksun */
+  cursor: pointer;
+}
+.list {
+  border: 1px solid red;
+}
