@@ -32,7 +32,7 @@ const KeyboardClipboard = () => {
 
   return (
     <div className="container text-center">
-      <h2 className="display-5 text-danger">Keyboard-Clipboard Event</h2>
+      {/* <h2 className="display-5 text-danger">Keyboard-Clipboard Event</h2>
 
       <input
         type="text"
@@ -58,7 +58,7 @@ const KeyboardClipboard = () => {
         cols="30"
         rows="10"
         onPaste={handleAreaPaste}
-      ></textarea>
+      ></textarea> */}
     </div>
   )
 }
