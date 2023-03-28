@@ -81,8 +81,8 @@ import { useState } from "react";
 
 const Form = () => {
 
-const [username, setUsername] = useState("No name")
-const [email, setEmail] = useState("Enter your email address")
+const [username, setUsername] = useState("")
+const [email, setEmail] = useState("")
 const [password, setPassword] = useState("")
 
 const handleUsername = (e) => {
@@ -92,9 +92,23 @@ const handleUsername = (e) => {
 const handleEmail = (e) => {
   setEmail(e.target.value)
 }
+const handleSubmit = (e) => {
+
+  e.preventDefault()
+
+  alert(`
+    username:${username}
+    email:${email}
+    password:${password}
+  `)
+
+  setEmail("")
+  setPassword("")
+  setUsername("")
+}
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h2 className="display-6 text-danger">FORMS</h2>
 
       <div className="mb-3">
@@ -102,32 +116,37 @@ const handleEmail = (e) => {
           Username: <span className="text-primary">{username}</span>
         </label>
         <input 
-          type="email" 
+          type="text" 
           className="form-control" 
           id="username" 
           onChange={handleUsername}
-          placeholder={username}/>
+          placeholder={username}
+          required/>
       </div>
 
       <div className="mb-3">
         <label htmlFor="email" className="form-label">
-          Email: <span className="text-primary">{email}</span>
+          Email: <span className="text-danger fs-6">{email}</span>
         </label>
         <input
           type="email"
           className="form-control"
           id="email"
           onChange={handleEmail}
-          value={email}/>
+          value={email}
+          required/>
       </div>
       <div className="mb-3">
         <label htmlFor="password" className="form-label">
-          Password
+          Password <span className="text-warning"></span>
         </label>
         <input
           type="password"
           className="form-control"
           id="password"
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder={password}
+          required
         />
       </div>
       <button type="submit" className="btn btn-danger">
