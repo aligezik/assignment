@@ -82,9 +82,17 @@ const KeyboardClipboard = () => {
         <div>
         <h2 className="display-5 text-danger">KeyboardClipboard</h2>
 
-        <input type="text" className="form-control" onChange={(e) => setInputData(e.target.value)} />
+        <input type="text" className="form-control" onChange={(e) => {
+                 e.target.value = e.target.value.toUpperCase()
+                setInputData(e.target.value)
+            }} />
 
-        <p className="text-start mt-4">{inputData}</p>
+        {/* <p className="text-start mt-4">{inputData.toLowerCase()}</p> */}
+
+        <div className="text-start mt-4">
+            <h6>Copied Input Data</h6>
+            <p>{inputData.toLowerCase()}</p>
+        </div>
 
         <textarea 
             className="form-control" 
