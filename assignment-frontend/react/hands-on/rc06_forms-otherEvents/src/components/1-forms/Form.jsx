@@ -81,8 +81,13 @@ import { useState } from "react";
 
 const Form = () => {
 
-const [] = useState()
+const [username, setUsername] = useState("")
+const [email, setEmail] = useState("")
+const [password, setPassword] = useState("")
 
+const handleUsername = () => {
+  
+}
 
   return (
     <form>
@@ -90,9 +95,9 @@ const [] = useState()
 
       <div className="mb-3">
         <label htmlFor="username" className="form-label">
-          User Name
+          Username: <span>{username}</span>
         </label>
-        <input type="email" className="form-control" id="username" />
+        <input type="email" className="form-control" id="username" onChange={handleUsername}/>
       </div>
 
       <div className="mb-3">
