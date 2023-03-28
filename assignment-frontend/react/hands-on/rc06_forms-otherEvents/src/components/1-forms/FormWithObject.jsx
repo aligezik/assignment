@@ -96,3 +96,105 @@
 // }
 
 // export default FormWithObject
+
+import { useState } from 'react'; 
+
+const FormWithObject = () => {
+
+    const [formData, setFormData] = useState({
+        username:"",
+        email:"",
+        password:"",
+        address:"",
+    })
+    
+    const { username, email, password, address} = formData
+   
+    const handleFormData = (e) => {
+        console.log(e.target.value, e.target.id);
+        // console.log(e.target.id);
+        setFormData({...formData, 
+            [e.target.id]: e.target.value,
+
+        })
+    }
+
+    const handleSubmit = (e) => {
+    
+      e.preventDefault()
+    
+      alert(`
+        Username:${username}
+        Email:${email}
+        Password:${password}
+        Address:${address}
+      `)
+        //! formu resetliyoruz
+    //   setFormData({username: "", email: "", password: "", address: ""})
+    }
+    
+      return (
+        <form onSubmit={handleSubmit}>
+          <h2 className="display-6 text-danger">FormWithObject</h2>
+    
+          <div className="mb-3">
+            <label htmlFor="username" className="form-label">
+              Username: <span className="text-primary">{username}</span>
+            </label>
+            <input 
+              type="text" 
+              className="form-control" 
+              id="username" 
+              onChange={handleFormData}
+              // placeholder={username}
+              value={username}
+              required/>
+          </div>
+    
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Email: <span className="text-danger fs-6">{email}</span>
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              id="email"
+              onChange={handleFormData}
+              value={email}
+              required/>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">
+             Password
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              onChange={handleFormData}
+              // placeholder={password}
+              value={password} 
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">
+              Address: {address}
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="address"
+              onChange={handleFormData}
+              // placeholder={password}
+              value={address} 
+            
+            />
+          </div>
+          <button type="submit" className="btn btn-danger">
+            Submit
+          </button>
+        </form>
+      );
+    };
+    
+    export default FormWithObject;

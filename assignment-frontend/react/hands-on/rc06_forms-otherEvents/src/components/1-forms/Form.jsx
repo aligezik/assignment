@@ -102,9 +102,9 @@ const handleSubmit = (e) => {
     password:${password}
   `)
 
-  setEmail("")
   setPassword("")
   setUsername("")
+  setEmail("")
 }
 
   return (
@@ -120,7 +120,8 @@ const handleSubmit = (e) => {
           className="form-control" 
           id="username" 
           onChange={handleUsername}
-          placeholder={username}
+          // placeholder={username}
+          value={username}
           required/>
       </div>
 
@@ -138,14 +139,15 @@ const handleSubmit = (e) => {
       </div>
       <div className="mb-3">
         <label htmlFor="password" className="form-label">
-          Password <span className="text-warning"></span>
+          Password <span></span>
         </label>
         <input
           type="password"
           className="form-control"
           id="password"
           onChange={(e) => setPassword(e.target.value)}
-          placeholder={password}
+          // placeholder={password}
+          value={password} 
           required
         />
       </div>
