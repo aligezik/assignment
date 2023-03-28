@@ -81,12 +81,16 @@ import { useState } from "react";
 
 const Form = () => {
 
-const [username, setUsername] = useState("")
-const [email, setEmail] = useState("")
+const [username, setUsername] = useState("No name")
+const [email, setEmail] = useState("Enter your email address")
 const [password, setPassword] = useState("")
 
-const handleUsername = () => {
-  
+const handleUsername = (e) => {
+  // console.log(e.target.value)
+  setUsername(e.target.value)
+}
+const handleEmail = (e) => {
+  setEmail(e.target.value)
 }
 
   return (
@@ -95,20 +99,26 @@ const handleUsername = () => {
 
       <div className="mb-3">
         <label htmlFor="username" className="form-label">
-          Username: <span>{username}</span>
+          Username: <span className="text-primary">{username}</span>
         </label>
-        <input type="email" className="form-control" id="username" onChange={handleUsername}/>
+        <input 
+          type="email" 
+          className="form-control" 
+          id="username" 
+          onChange={handleUsername}
+          placeholder={username}/>
       </div>
 
       <div className="mb-3">
         <label htmlFor="email" className="form-label">
-          Email
+          Email: <span className="text-primary">{email}</span>
         </label>
         <input
           type="email"
           className="form-control"
           id="email"
-        />
+          onChange={handleEmail}
+          value={email}/>
       </div>
       <div className="mb-3">
         <label htmlFor="password" className="form-label">
