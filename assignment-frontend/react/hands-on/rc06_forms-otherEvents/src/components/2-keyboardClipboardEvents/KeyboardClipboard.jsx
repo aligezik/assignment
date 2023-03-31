@@ -71,7 +71,11 @@ import { useState } from "react"
 const KeyboardClipboard = () => {
     
     const [inputData, setInputData] = useState("")
-    
+    const handleKeyDown = (e) => {
+        console.log(e.keyCode);
+    }
+
+
     // const handleChange = () => {
         
     // }
@@ -82,12 +86,14 @@ const KeyboardClipboard = () => {
         <div>
         <h2 className="display-5 text-danger">KeyboardClipboard</h2>
 
-        <input type="text" className="form-control" onChange={(e) => {
-                 e.target.value = e.target.value.toUpperCase()
+        <input type="text" className="form-control" 
+            onChange={(e) => {
+                e.target.value = e.target.value.toUpperCase()
                 setInputData(e.target.value)
-            }} />
-
-        {/* <p className="text-start mt-4">{inputData.toLowerCase()}</p> */}
+            console.log(e.keyCode);
+        }} 
+        onKeyDown={handleKeyDown}
+        />
 
         <div className="text-start mt-4">
             <h6>Copied Input Data</h6>
