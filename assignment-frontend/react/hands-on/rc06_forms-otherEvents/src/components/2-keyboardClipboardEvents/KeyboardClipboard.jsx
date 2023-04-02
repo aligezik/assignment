@@ -7,7 +7,7 @@
     //   const handleKeyDown = (e) => {
         //     console.log(e.keyCode)
 //     if (e.keyCode >= 48 && e.keyCode <= 57) {
-    //       e.preventDefault() //? Rakam girisinin engellenmesi icin
+    //       e.preventDefault() //? Rakam girisinin engellenmesi icin.
     //       alert("Please dont enter a number")
     //     }
     //   }
