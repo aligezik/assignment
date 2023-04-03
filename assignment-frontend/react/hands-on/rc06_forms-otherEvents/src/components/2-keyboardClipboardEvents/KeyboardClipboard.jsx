@@ -73,10 +73,11 @@ const KeyboardClipboard = () => {
     const [inputData, setInputData] = useState("")
     const handleKeyDown = (e) => {
         console.log(e.keyCode);
-    }
+        if(e.keyCode >= 48 && e.keyCode <= 57){
+            alert("Please don't enter a number");
+            e.preventDefault(); //! default olarak yazan rakam girisini engelledi
+        }
 
-    const handleKeyDown = (e) => {
-        console.log(e.keyCode);
     }
 
 
@@ -94,7 +95,7 @@ const KeyboardClipboard = () => {
             onChange={(e) => {
                 e.target.value = e.target.value.toUpperCase()
                 setInputData(e.target.value)
-            console.log(e.keyCode);
+            // console.log(e.keyCode);
         }} 
         onKeyDown={handleKeyDown}
         />
