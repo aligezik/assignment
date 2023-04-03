@@ -75,6 +75,10 @@ const KeyboardClipboard = () => {
         console.log(e.keyCode);
     }
 
+    const handleKeyDown = (e) => {
+        console.log(e.keyCode);
+    }
+
 
     // const handleChange = () => {
         
