@@ -90,7 +90,11 @@ const KeyboardClipboard = () => {
 
     const handleParCopy = (e) => {
         alert("You can't copy");
-        
+        e.preventDefault(); //! default olarak kopyaalanmasini engeller        
+    }
+    const handleParCut = (e) => {
+        alert("You can't cut");
+        e.preventDefault();
     }
 
     return (
@@ -108,7 +112,7 @@ const KeyboardClipboard = () => {
 
         <div className="text-start mt-4">
             <h6>Copied Input Data</h6>
-            <p onCopy={handleParCopy}>{inputData.toLowerCase()}</p>
+            <p onCopy={handleParCopy} onCut={handleParCut}>Kopyalanamayan Alan: {inputData.toLowerCase()}</p>
         </div>
 
         <textarea 
