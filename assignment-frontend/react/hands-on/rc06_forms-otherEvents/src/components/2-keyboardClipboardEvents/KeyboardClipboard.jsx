@@ -77,16 +77,22 @@ const KeyboardClipboard = () => {
             alert("Please don't enter a number");
             e.preventDefault(); //! default olarak yazan rakam girisini engelledi
         }
-
+    }
+    const handleAreaPaste = (e) => {
+        console.log(e);
+        e.target.style.color = "red";
+        e.target.style.fontFamily ="Comic Sans MS";
+        e.target.style.border ="1px solid magenta";
+        e.target.value += " "+e.clipboardData.getData("text").toLowerCase();
+        e.preventDefault();
     }
 
 
-    // const handleChange = () => {
+    const handleParCopy = (e) => {
+        alert("You can't copy");
         
-    // }
-    
-    
-    
+    }
+
     return (
         <div>
         <h2 className="display-5 text-danger">KeyboardClipboard</h2>
@@ -102,7 +108,7 @@ const KeyboardClipboard = () => {
 
         <div className="text-start mt-4">
             <h6>Copied Input Data</h6>
-            <p>{inputData.toLowerCase()}</p>
+            <p onCopy={handleParCopy}>{inputData.toLowerCase()}</p>
         </div>
 
         <textarea 
@@ -111,6 +117,7 @@ const KeyboardClipboard = () => {
             id="textarea" 
             cols="30" 
             rows="10"
+            onPaste={handleAreaPaste}
         ></textarea>
     </div>
   )
