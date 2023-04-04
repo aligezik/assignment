@@ -77,6 +77,11 @@ const MouseEvent = () => {
     const [visible, setVisible] = useState(false)
     const [visiblee, setVisiblee] = useState(false)
     const [toggle, setToggle] = useState(false)
+
+
+    const [coordX, setCoordX] = useState()
+    const [coordY, setCoordY] = useState()
+    
     
     // console.log(toggle);
     const handleDoubleClick = (e) => {
@@ -85,25 +90,36 @@ const MouseEvent = () => {
         // console.log(toggle);
         toggle 
             ? (e.target.className ="w-50 bg-danger text-light rounded-5 m-4 p-4")
-            : (e.target.className ="w-50 bg-warning m-4 p-4 ")
+            : (e.target.className ="w-50 bg-warning rounded-5 m-4 p-4 ")
+    }
+    const handleMouseMove = (e) => {
+        setCoordX(e.nativeEvent.offsetX)
+        setCoordY(e.nativeEvent.offsetY)
+        // setCoordX(e.pageX)
+        // setCoordY(e.pageY)
+
     }
 
 
     return (
         <div className='container text-center d-flex flex-column align-items-center mt-4'>
             <h2 className='text-danger'>MOUSE EVENTS</h2>
-            <div id='todo-1' className="bg-success text-light w-50 p-4" onMouseOver={() => { setVisible(true) }} onMouseOut={() => { setVisible(false) }}>todo item 1</div>
+            <div id='todo-1' className="bg-success text-light w-50 p-4" onMouseOver={() => { setVisible(true) }} onMouseOut={() => { setVisible(false) }}>Over & Out</div>
             {visible && <div>Mouse Events</div>}
 
-            <div id='todo-2' className="bg-success text-light w-50 p-4 mt-4" onDoubleClick={() => { setVisiblee(true) }} onClick={() => { setVisiblee(false) }}>todo item 2</div>
+            <div id='todo-2' className="bg-success text-light w-50 p-4 mt-4" onDoubleClick={() => { setVisiblee(false) }} onClick={() => { setVisiblee(true) }}>One & Double Clicks</div>
             {visiblee && <div>Mouse event2</div>}
 
 
-            <div id='todo-3' className="bg-success text-light w-50 p-4 my-4" onClick={handleDoubleClick}>todo item 3</div>
+            <div id='todo-3' className="bg-success text-light w-50 p-4 my-4" onClick={handleDoubleClick}>One click</div>
             {/* {visiblee && <div>Mouse event 3</div>} */}
             
+            <div id='todo-4' className="bg-success text-light w-50 p-4 my-4" onMouseMove={handleMouseMove}>On Mouse Move</div>
+            
             <p>X and Y</p>
-            <p className="text-danger fw-bold">{"X"} {"Y"}</p>
+            <p className="text-danger fw-bold">{coordX} {coordY}</p>
+
+            <h6 className='w-40 bg-warning text-black p-3 rounded-3'>Bilge Panter</h6>
         </div>
     )
 }
