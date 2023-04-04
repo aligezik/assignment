@@ -78,11 +78,14 @@ const MouseEvent = () => {
     const [visiblee, setVisiblee] = useState(false)
     const [toggle, setToggle] = useState(false)
     
-    console.log(toggle);
+    // console.log(toggle);
     const handleDoubleClick = (e) => {
         // alert("Double clicked");
         setToggle(!toggle);
-        console.log(toggle);
+        // console.log(toggle);
+        toggle 
+            ? (e.target.className ="w-50 bg-danger text-light rounded-5 m-4 p-4")
+            : (e.target.className ="w-50 bg-warning m-4 p-4 ")
     }
 
 
@@ -96,7 +99,7 @@ const MouseEvent = () => {
             {visiblee && <div>Mouse event2</div>}
 
 
-            <div id='todo-3' className="bg-success text-light w-50 p-4 my-4" onDoubleClick={handleDoubleClick}>todo item 3</div>
+            <div id='todo-3' className="bg-success text-light w-50 p-4 my-4" onClick={handleDoubleClick}>todo item 3</div>
             {/* {visiblee && <div>Mouse event 3</div>} */}
             
             <p>X and Y</p>
