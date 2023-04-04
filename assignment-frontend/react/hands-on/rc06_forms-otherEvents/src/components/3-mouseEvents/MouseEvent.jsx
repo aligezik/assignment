@@ -112,7 +112,7 @@ const MouseEvent = () => {
 
 
             <div id='todo-3' className="bg-success text-light w-50 p-4 my-4" onClick={handleDoubleClick}>One click</div>
-            {/* {visiblee && <div>Mouse event 3</div>} */}
+            {/* {visiblee && <div>Mouse event - 3</div>} */}
             
             <div id='todo-4' className="bg-success text-light w-50 p-4 my-4" onMouseMove={handleMouseMove}>On Mouse Move</div>
             
