@@ -4,6 +4,7 @@ import UseEffectHook from "./components/UseEffectHook"
 import User from "./components/User"
 
 function App() {
+  // const [toggle, setToggle] = useState(false)
   const [toggle, setToggle] = useState(false)
 
   return (
@@ -16,7 +17,9 @@ function App() {
       {/* {toggle && <LifeCycleMethods />} */}
 
       {/* {toggle && <UseEffectHook />} */}
-      <LifeCycleMethods/>
+      <button className="btn btn-warning"  onClick={ () => setToggle(!toggle)}>{toggle ? 'Hide' : 'Show'}</button>
+      {toggle ? <LifeCycleMethods/> : null}
+      {/* <LifeCycleMethods/> */}
       {/* <User /> */}
     </div>
   )
