@@ -41,8 +41,8 @@ class LifeCycleMethods extends React.Component {
     console.log("3-componentdidmount")
   }
 
-  //! 4-) Bu metot ilk render haric diger tüm render'lardan sonra cagrilir.
-  //!  prevState ve prevProps degerlerini parametre olarak alabilir.
+  // //! 4-) Bu metot ilk render haric diger tüm render'lardan sonra cagrilir.
+  // //!  prevState ve prevProps degerlerini parametre olarak alabilir.
   componentDidUpdate(prevState) {
     console.log("4-componentDidUpdate")
     // if(prevState.dolarParite - this.dolarParite > 3){
@@ -50,10 +50,10 @@ class LifeCycleMethods extends React.Component {
     // }
   }
 
-  //! 5-) Bir component DOM agacindan kaldiriltiktan hemen sonra cagirlir.
-  componentWillUnmount() {
-    console.log("5-componentWillUnmount")
-  }
+  // //! 5-) Bir component DOM agacindan kaldiriltiktan hemen sonra cagirlir.
+  // componentWillUnmount() {
+  //   console.log("5-componentWillUnmount")
+  // }
 
   render() {
     //! 2-) Her bir state yada prop degistiginde (render) cagrilir

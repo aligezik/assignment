@@ -16,8 +16,8 @@ function App() {
       {/* {toggle && <LifeCycleMethods />} */}
 
       {/* {toggle && <UseEffectHook />} */}
-
-      <User />
+      <LifeCycleMethods/>
+      {/* <User /> */}
     </div>
   )
 }
