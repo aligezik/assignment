@@ -18,7 +18,8 @@ function App() {
 
       {/* {toggle && <UseEffectHook />} */}
       <button className="btn btn-warning"  onClick={ () => setToggle(!toggle)}>{toggle ? 'Hide' : 'Show'}</button>
-      {toggle ? <LifeCycleMethods/> : null}
+      {/* {toggle ? <LifeCycleMethods/> : null} */}
+      {toggle && <LifeCycleMethods/>}
       {/* <LifeCycleMethods/> */}
       {/* <User /> */}
     </div>

@@ -51,9 +51,9 @@ class LifeCycleMethods extends React.Component {
   }
 
   // //! 5-) Bir component DOM agacindan kaldiriltiktan hemen sonra cagirlir.
-  // componentWillUnmount() {
-  //   console.log("5-componentWillUnmount")
-  // }
+  componentWillUnmount() {
+    console.log("5-componentWillUnmount")
+  }
 
   render() {
     //! 2-) Her bir state yada prop degistiginde (render) cagrilir
