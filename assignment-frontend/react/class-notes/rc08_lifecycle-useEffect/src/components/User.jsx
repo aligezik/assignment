@@ -1,3 +1,37 @@
+import React, { useState } from 'react'
+
+const User = () => {
+    // let user = ""
+    const [user, setUser] = useState("")    
+
+    const getUser = () =>{    
+    fetch("https://randomuser.me/api")
+        .then((res) => res.json())
+        .then((data) => setUser(data))
+        .catch((err) => console.log(err))
+}
+    console.log(user);
+  return (
+    <div>
+        {/* <h1>{user.name.first}</h1> */}
+        {/* <h1>{setUser()}</h1> */}
+        <img src="" alt="" />
+        <h4>email</h4>
+        <h5>telefon</h5>
+        <p>dob</p>
+
+        <button className='btn btn-warning' onClick={getUser}>
+            Get User
+        </button>
+    </div>
+  )
+}
+
+export default User
+
+
+
+
 // import React, { useEffect, useState } from "react"
 
 // const User = () => {
@@ -38,3 +72,4 @@
 // }
 
 // export default User
+

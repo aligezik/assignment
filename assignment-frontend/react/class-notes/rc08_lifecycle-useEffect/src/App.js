@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="container text-center mt-4">
-      <button className="btn btn-warning"  onClick={ () => setToggle(!toggle)}>{toggle ? 'Hide' : 'Show'}</button>
+      {/* <button className="btn btn-warning"  onClick={ () => setToggle(!toggle)}>{toggle ? 'Hide' : 'Show'}</button> */}
       {/* <button className="btn btn-danger" onClick={() => setToggle(!toggle)}>
         {toggle ? "Hide" : "Show"}
       </button> */}
@@ -23,9 +23,9 @@ function App() {
       {/* <LifeCycleMethods/> */}
       {/* <User /> */}
 
-      {toggle && <UseEffectHook/>}
+      {/* {toggle && <UseEffectHook/>} */}
       {/* <UseEffectHook/> */}
-
+      <User/>
 
     </div>
   )
