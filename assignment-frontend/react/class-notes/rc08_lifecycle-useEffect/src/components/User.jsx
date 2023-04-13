@@ -28,6 +28,11 @@ const User = () => {
       <h5>{user?.cell}</h5>
       <p>{user?.dob?.age}</p>
       <p>{user?.dob?.date}</p>
+      <p>{new Date (user?.dob?.date).toLocaleDateString()}</p>
+      <p>{new Date (user?.dob?.date).toDateString()}</p>
+      <p>{new Date (user?.dob?.date).toLocaleTimeString("tr-tr")}</p>
+      <p>{new Date (user?.dob?.date).toLocaleTimeString("en-us")}</p>
+      <p>{new Date (user?.dob?.date).toLocaleTimeString("de-de")}</p>
 
       <button className="btn btn-warning" onClick={getUser}>
         Get User
