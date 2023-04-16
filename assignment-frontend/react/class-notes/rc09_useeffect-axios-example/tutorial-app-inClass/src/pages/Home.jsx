@@ -1,31 +1,43 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+// import axios from "axios"
+// import { useEffect, useState } from "react"
 import AddTutorial from "../components/AddTutorial"
 import TutorialList from "../components/TutorialList"
+import axios from "axios"
 
-const Home = () => {
-  const [tutorials, setTutorials] = useState([])
+// const [tutorials, setTutorials] = useState([])
 
-  const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials/"
+// const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials/"
+
+  // const getTutorials = async () => {
+  //   try {
+  //     const { data } = await axios(BASE_URL)
+  //     setTutorials(data)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+  // console.log(tutorials)
+  //? componentDidMount
+  // useEffect(() => {
+  //   getTutorials()
+  // }, [])
+  const Home = () => {
+
+ const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials/"
 
   const getTutorials = async () => {
-    try {
-      const { data } = await axios(BASE_URL)
-      setTutorials(data)
-    } catch (error) {
-      console.log(error)
-    }
+    
+    const { data } = await axios(BASE_URL)
+    console.log(data);
   }
-  console.log(tutorials)
-  //? componentDidMount
-  useEffect(() => {
-    getTutorials()
-  }, [])
+  getTutorials()
 
   return (
     <>
-      <AddTutorial getTutorials={getTutorials} />
-      <TutorialList tutorials={tutorials} getTutorials={getTutorials} />
+      <AddTutorial/>
+      {/* <AddTutorial getTutorials={getTutorials} /> */}
+      <TutorialList/>
+      {/* <TutorialList tutorials={tutorials} getTutorials={getTutorials} /> */}
     </>
   )
 }
