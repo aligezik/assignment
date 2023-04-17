@@ -36,7 +36,7 @@ import axios from "axios"
     <>
       <AddTutorial/>
       {/* <AddTutorial getTutorials={getTutorials} /> */}
-      <TutorialList/>
+      <TutorialList data={data}/>
       {/* <TutorialList tutorials={tutorials} getTutorials={getTutorials} /> */}
     </>
   )
