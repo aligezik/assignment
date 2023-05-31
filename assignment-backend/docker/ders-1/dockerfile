@@ -6,5 +6,7 @@ WORKDIR /app
 #COPY FROM TO
 #COPY app.py /app
 COPY . . 
-# Commands:
+
+#after build:
+# Commands (docker run imagename):
 CMD python app.py
