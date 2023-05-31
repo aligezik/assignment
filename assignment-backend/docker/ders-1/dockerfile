@@ -1,0 +1,10 @@
+#alt yapi
+FROM python:alpine3.18
+#calisma alani
+WORKDIR /app
+#dosyalari aktar
+#COPY FROM TO
+#COPY app.py /app
+COPY . . 
+# Commands:
+CMD python app.py
