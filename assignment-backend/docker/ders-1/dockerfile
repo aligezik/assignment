@@ -10,3 +10,4 @@ COPY . .
 #after build:
 # Commands (docker run imagename):
 CMD python app.py
+EXPOSE 8000
